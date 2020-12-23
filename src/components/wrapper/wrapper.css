@@ -1,0 +1,115 @@
+.Header{
+    width: 100vw;
+    height: 100vh;
+}
+.logo{
+    width: 20%;
+    padding: 2rem 2rem;
+}
+
+/* //left-side/ */
+.left-side{
+ 
+    width: 50%;
+    height: 30%;
+    color: aliceblue;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    transform: translate(-50% -50%);
+}
+.head{
+    font-size: 3.4rem;
+    color: #7f7f80;
+    font-weight: bold;
+}
+.left-side h3{
+    margin: 1.4rem 0;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.left-side h3 span{
+    color: rgb(205, 202, 206);
+    font-size: 3rem;
+    padding-left: 3rem;
+}
+
+/* //right-side// */
+.right-side{
+    position: absolute;
+    top: 35%;
+    left: 54%;
+    transform: translate(-50 -50);
+    line-height: 4rem;
+}
+.right-side p{
+    color: #c0c1c2;
+    font-size: 1.5rem;
+   font-weight: 600;
+   line-height: 2rem;
+   padding: 2rem 0;
+}
+.right-side Button{
+    left: 35%;
+}
+.right-btn{
+    font-size: 2.4rem;
+}
+
+@media only screen and (min-width: 320px){
+
+}
+/* //about// */
+.colo{
+    color:#d1d0d0;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left: 2px;
+    margin-left: 1rem;
+    background: rgb(49,171,175);
+    background: linear-gradient(90deg, rgba(49,171,175,0.9976365546218487) 0%, rgba(4,173,181,1) 27%, rgba(13,211,222,1) 71%, rgba(26,242,255,1) 100%);
+    width: 14%;
+    border-radius: 0 1.5rem 1.5rem 0px;
+    box-shadow: -1px 3px 15px 3px rgba(49,171,175,0.92);
+    -webkit-box-shadow: -1px 3px 15px 3px rgba(49,171,175,0.92);
+    -moz-box-shadow: -1px 3px 15px 3px rgba(49,171,175,0.92);
+}
+.colonies{
+    display: flex;
+}
+.colonies p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #aaa9a9;
+    line-height: 2rem;
+    word-spacing: .8rem;
+}
+.colony-img{
+    width: 50%;
+    margin:0 2rem;
+    border-radius: 1rem;
+}
+.colonies p a{
+    list-style: none;
+}
+.colonies p a button{
+    font-size: 1.5rem;
+    outline: none;
+    font-weight: bold;
+    color: #cecece; 
+    margin-top: 3rem;
+    padding: .5rem 3rem;
+    transition: .3s;
+    background: rgb(49,171,175);
+    border-radius: .5rem;
+    background: linear-gradient(90deg, rgba(49,171,175,0.9976365546218487) 0%, rgba(4,173,181,1) 27%, rgba(13,211,222,1) 71%, rgba(26,242,255,1) 100%);
+}
+.colonies p a button:hover{
+    box-shadow: -1px 3px 15px 3px rgba(49,171,175,0.92);
+    -webkit-box-shadow: -1px 3px 15px 3px rgba(49,171,175,0.92);
+    -moz-box-shadow: -1px 3px 15px 3px rgba(49,171,175,0.92);
+    cursor: pointer;
+}
