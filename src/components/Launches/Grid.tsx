@@ -2,6 +2,11 @@ import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+///Launches
+import {Launches} from './Launches';
+////useQuery
+import {useLaunchesQuery} from '../../generated/graphql';
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -26,6 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function LaunchesGrid() {
   const classes = useStyles();
+/////working for query
 
   return (
     <div className={classes.root}>
