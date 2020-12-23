@@ -33,12 +33,20 @@ export default function LaunchesGrid() {
   const classes = useStyles();
 /////working for query
 
+const {data,error,loading} = useLaunchesQuery()
+if(error || !data){
+   return <h3>error</h3>
+}
+if(loading){
+    return <h3>loading...</h3>
+}
+  
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item className={classes.grid} xs={12}>
           <Paper className={classes.paper}>
-
+             <Launches data={data}/>
           </Paper>
         </Grid>
       </Grid>
