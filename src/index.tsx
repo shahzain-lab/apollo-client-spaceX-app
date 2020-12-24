@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //apollo client
-import {ApolloProvider, InMemoryCache} from '@apollo/client';
+import {ApolloClient,ApolloProvider, InMemoryCache} from '@apollo/client';
 ////App
 import App from './App';
 
-const client = ({
+const client = new ApolloClient({
   uri: "https://spacexdata.herokuapp.com/graphql",
   cache: new InMemoryCache()
 })as any

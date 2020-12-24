@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme: Theme) =>
     ,
     paper: {
       padding: theme.spacing(2),
-      textAlign: 'center',
       color: theme.palette.text.secondary,
       width: '90%',
       background: "#272727"
@@ -34,8 +33,8 @@ export default function LaunchesGrid() {
 /////working for query
 
 const {data,error,loading} = useLaunchesQuery()
-if(error || !data){
-   return <h3>error</h3>
+if(error){
+   return <h3 style={{color: 'red'}}>error</h3>
 }
 if(loading){
     return <h3>loading...</h3>
