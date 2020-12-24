@@ -7,6 +7,7 @@ import LaunchesGrid from './components/Launches/Grid';
 function App() {
   return (
     <div className="App">
+      
       <LaunchesGrid />
     </div>
   );
