@@ -16,6 +16,7 @@
     text-transform: uppercase;
     font-weight: 500;
 }
+
 .launch-year{
     color: #fff3f3;
     font-size: 1.3rem;
@@ -50,4 +51,30 @@
         margin: 1.2rem;
         left: 0%;
     }
+}
+.Details{
+    width: 100%;
+    font-size: 1rem;
+    padding: .6rem 1.8rem;
+    background: rgb(49,171,175);
+    background: linear-gradient(90deg, rgba(49,171,175,0.9976365546218487) 0%, rgba(4,173,181,1) 27%, rgba(13,211,222,1) 71%, rgba(26,242,255,1) 100%);
+    border-radius:  6px;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #d8d8d8;
+    transition: .3s;
+}
+.Details:hover{
+    box-shadow: -1px 3px 15px 3px rgba(49,171,175,0.92);
+}
+.description{
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.description span{
+    font-size: 1.4rem;
+    color: #b8b8b8;
 }

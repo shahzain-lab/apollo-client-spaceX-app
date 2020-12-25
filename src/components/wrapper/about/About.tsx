@@ -7,9 +7,9 @@ import colony from '../../images/colony.jpg';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
-      flexGrow: 1,
-    },
+    // root: {
+    //   flexGrow: 1,
+    // },
     grid:{
      display: "flex",
      justifyContent: "center",
@@ -31,7 +31,7 @@ export function About() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className="wrapper">
       <Grid container spacing={3}>
         <Grid item className={classes.grid} xs={12}>
           <Paper className={classes.paper}>

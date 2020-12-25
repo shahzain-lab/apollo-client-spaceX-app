@@ -7,6 +7,8 @@ query launches {
       mission_id
       mission_name
       launch_year
+      launch_date_local
+      details
       launch_success
       links{
         flickr_images

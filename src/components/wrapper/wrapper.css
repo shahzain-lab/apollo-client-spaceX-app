@@ -18,9 +18,10 @@
     transform: translate(-50% -50%);
 }
 .head{
-    font-size: 50px;
+    font-size: 40px;
     color: #7f7f80;
     font-weight: bold;
+    text-transform: uppercase;
 }
 .left-side h3{
     margin: 1.4rem 0;
@@ -65,7 +66,7 @@
     box-shadow: -1px 3px 15px 3px rgba(49,171,175,0.92);
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 768px){
     .head{
         font-size: 1.3rem;
         line-height: 1.2rem;
@@ -91,6 +92,7 @@
     }
   }
 /* //about// */
+
 .colo{
     color:#d1d0d0;
     font-size: 2.2rem;
