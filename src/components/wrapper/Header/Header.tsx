@@ -3,27 +3,11 @@ import React from 'react';
 import logo from '../../images/logo.png';
 //css
 import '../wrapper.css';
-///button
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      '& > *': {
-        margin: theme.spacing(1),
-        fontSize: "1rem",
-        fontWeight: 'bold'
-      },
-    },
-  }),
-);
 
 
 export const Header =()=> {
-    const classes = useStyles();
-
     return(
         <div className="Header">
           {/* ///logo */}
@@ -43,10 +27,9 @@ export const Header =()=> {
               <h1 className="head">Road to the red palnet</h1>
                 <p>spaceX design,Launches and manufactures adavanced<br /> rockets and spacecraft</p>
                     
-      <Button variant="contained"className={classes.root} color="secondary">
-        View Launches
-      </Button>
-    
+                 <button className="right-btn">
+                    view Launches
+                   </button>   
     
                   </div>
           </section>

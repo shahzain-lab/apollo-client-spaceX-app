@@ -14,7 +14,15 @@ export default function LaunchesGrid() {
 
 const {data,error,loading} = useLaunchesQuery()
 if(error){
-   return <h3 style={{color: 'red'}}>error</h3>
+   return <div className="something">
+     <h3>Something went wrong</h3>
+     <br />
+     <ul>
+       <li>check the internet routes, cables and modems</li>
+       <li>Reconnecting to Wi-Fi</li>
+       <li>Running Windows Network Diagnostics</li>
+     </ul>
+   </div>
 }
   
   return (

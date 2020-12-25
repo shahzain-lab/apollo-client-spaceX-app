@@ -3,7 +3,7 @@ import {LaunchesQuery}  from '../../generated/graphql';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-//
+//className and moment
 
 interface Props{
     data?: LaunchesQuery;
@@ -48,7 +48,10 @@ export const Launches: React.FC<Props>=({data,loading})=> {
                <Paper className={classes.paper} key={i}>
                  <h1 className="mission_name">{launch.mission_name}</h1>
            <h4 className="launch-year">Launch Year: <span>{launch.launch_year}</span></h4>
-           <h4 className="status">Status: <span>{JSON.stringify(launch.launch_success)}</span></h4>
+           <h4 className="status">Status: <span>
+             {JSON.stringify(launch.launch_success)}
+           </span>
+           </h4>
                </Paper>
            ))}
            </Grid>
