@@ -57,8 +57,8 @@ export const LaunchDetails: React.FC<Props> = ({data,loading}) => {
                       <h3 className="missionDetails">Mission name: <span>{data.launch.mission_name}</span></h3>
                       <h4 className="missionDetails">Upcoming: <span className={classNames({'text-success':data.launch.upcoming,'text-danger':!data.launch.upcoming })}>{JSON.stringify(data.launch.upcoming)}</span></h4>
                       <h4 className="missionDetails">Launch area: <span>{data.launch.launch_site?.site_name_long}</span></h4>
-                      <p className="missionDetails">Description: <span>{data.launch.details}</span></p>
-                      <a target="blank" href={data.launch.links && data.launch.links?.wikipedia} className="wikipedia">wikipedia</a>
+                      <p className="missionDetails">Description: <span className="launchDetailsInfo">{data.launch.details}</span></p>
+                      <a target="blank" href={`${data.launch.links?.wikipedia}`} className="wikipedia">wikipedia</a>
                       <button className="dataButton">Back</button>
           </Paper>
         </Grid>

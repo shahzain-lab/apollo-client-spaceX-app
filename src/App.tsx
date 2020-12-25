@@ -1,15 +1,10 @@
 import React from 'react';
 import './App.css';
-// import { Header } from './components/wrapper/Header/Header';
-// import {About} from './components/wrapper/about/About';
-// import LaunchesGrid from './components/Launches/Grid';
-import { LaunchDetailsContainer } from './components/LaunchDetail/LaunchDetailsContainer';
+import { Header, About, LaunchDetailsContainer,LaunchesGrid } from './components/index';
 
 function App() {
   return (
     <div className="App">
-      
-      {/* <LaunchesGrid /> */}
       <LaunchDetailsContainer />
     </div>
   );

@@ -111,7 +111,7 @@
     color: #ffffff;
     font-size: 1.5rem;
 }
-.missionDetails p{
+.missionDetails .launchDetailsInfo{
     font-size: 1.2rem;
     color: #ffffff;
 }

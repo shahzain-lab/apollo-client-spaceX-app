@@ -9,7 +9,7 @@ import './style.css'
 
 
 
-export default function LaunchesGrid() {
+export function LaunchesGrid() {
 /////working for query
 
 const {data,error,loading} = useLaunchesQuery()
