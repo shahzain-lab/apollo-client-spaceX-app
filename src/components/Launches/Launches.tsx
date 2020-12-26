@@ -6,6 +6,8 @@ import Grid from '@material-ui/core/Grid';
 //className and moment
 import classNames from 'classnames';
 import {Link} from 'react-router-dom';
+///spinner
+import Spinner from '../images/Spinner.gif'
 
 
 export interface OwnProps{
@@ -44,9 +46,7 @@ export const Launches: React.FC<Props>=({data,loading,handleChange})=> {
     
   const classes = useStyles();
 
-    if(loading){
-        return <h3>Loading</h3>
-    }
+  
     return(
     
         <div className={classes.root}>
@@ -54,6 +54,7 @@ export const Launches: React.FC<Props>=({data,loading,handleChange})=> {
                 <Grid item className={classes.grid} xs={12}>
            {!!data?.launches &&data.launches.map((launch,i) => !!launch &&(
                <Paper className={classes.paper} key={i}>
+                 
                  <h1 className="mission_name">{launch.mission_name} 
                  <span>{launch.launch_date_local}</span></h1>
            <h4 className="launch-year">Launch Year: <span>{launch.launch_year}</span></h4>
