@@ -6,6 +6,8 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
+import {Link} from 'react-router-dom';
+
 interface Props{
  data?: LaunchinfoQuery;
  loading?: boolean;
@@ -59,7 +61,7 @@ export const LaunchDetails: React.FC<Props> = ({data,loading}) => {
                       <h4 className="missionDetails">Launch area: <span>{data.launch.launch_site?.site_name_long}</span></h4>
                       <p className="missionDetails">Description: <span className="launchDetailsInfo">{data.launch.details}</span></p>
                       <a target="blank" href={`${data.launch.links?.wikipedia}`} className="wikipedia">wikipedia</a>
-                      <button className="dataButton">Back</button>
+                      <Link to="/launches" className="dataButton">Back</Link>
           </Paper>
         </Grid>
       

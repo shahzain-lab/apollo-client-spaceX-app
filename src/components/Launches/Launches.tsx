@@ -5,8 +5,14 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 //className and moment
 import classNames from 'classnames';
+import {Link} from 'react-router-dom';
 
-interface Props{
+
+export interface OwnProps{
+  handleChange: (newId: number) => void;
+}
+
+interface Props extends OwnProps{
     data?: LaunchesQuery;
     loading?:boolean; 
 }
@@ -34,7 +40,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 
-export const Launches: React.FC<Props>=({data,loading})=> {
+export const Launches: React.FC<Props>=({data,loading,handleChange})=> {
     
   const classes = useStyles();
 
@@ -61,7 +67,7 @@ export const Launches: React.FC<Props>=({data,loading})=> {
            </span>
            </h4>
            {launch.details ? <h4 className="description"><span>Description: </span>{launch.details}</h4>: null}
-           <button className="Details">Launch Details</button>
+           <Link to="/launches/details" onClick={() => handleChange(launch.flight_number!)} className="Details">Launch Details</Link>
                </Paper>
            ))}
            </Grid>

@@ -1,6 +1,6 @@
 import React from 'react';
 ///Launches
-import {Launches} from './Launches';
+import {Launches, OwnProps} from './Launches';
 ////useQuery
 import {useLaunchesQuery} from '../../generated/graphql';
 ///css
@@ -9,7 +9,7 @@ import './style.css'
 
 
 
-export function LaunchesGrid() {
+export function LaunchesGrid(props: OwnProps) {
 /////working for query
 
 const {data,error,loading} = useLaunchesQuery()
@@ -28,7 +28,7 @@ if(error){
   return (
       <div>
         <h3 className="launch-head">Launches</h3>
-        <Launches data={data} loading={loading}/>
+        <Launches data={data} loading={loading} {...props}/>
       </div>
     );
 }

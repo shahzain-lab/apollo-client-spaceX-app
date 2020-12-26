@@ -10,6 +10,7 @@ query launches {
       launch_date_local
       details
       launch_success
+      flight_number
       links{
         flickr_images
         wikipedia

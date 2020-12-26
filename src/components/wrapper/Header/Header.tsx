@@ -3,8 +3,8 @@ import React from 'react';
 import logo from '../../images/logo.png';
 //css
 import '../wrapper.css';
-
-
+///router
+import {Link} from 'react-router-dom';
 
 
 export const Header =()=> {
@@ -27,12 +27,13 @@ export const Header =()=> {
               <h1 className="head">Road to the red palnet</h1>
                 <p>spaceX design,Launches and manufactures adavanced<br /> rockets and spacecraft</p>
                     
-                 <button className="right-btn">
+                 <Link to="/launches" className="right-btn">
                     view Launches
-                   </button>   
+                   </Link>   
     
                   </div>
           </section>
         </div>
+        
     )
 }

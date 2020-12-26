@@ -3,9 +3,13 @@ import { useLaunchinfoQuery } from '../../generated/graphql';
 import '../Launches/style.css';
 import { LaunchDetails } from './LaunchDetails';
 
-export const LaunchDetailsContainer =()=> {
+interface OwnProps {
+  id: number;
+}
+
+export const LaunchDetailsContainer =({id}: OwnProps)=> {
     
-const {error, loading, data} = useLaunchinfoQuery({variables: {id: '14'}});
+const {error, loading, data, refetch} = useLaunchinfoQuery({variables: {id: String(id)},});
 
 if(error){
     return <div className="something">

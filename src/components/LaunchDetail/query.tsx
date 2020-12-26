@@ -7,6 +7,7 @@ query launchinfo($id: String){
       mission_name
       details
       upcoming
+      flight_number
       links{
         flickr_images
         video_link

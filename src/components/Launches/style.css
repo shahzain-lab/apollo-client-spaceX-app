@@ -57,6 +57,7 @@
     }
 }
 .Details{
+    list-style: none;
     width: 100%;
     font-size: 1rem;
     padding: .6rem 1.8rem;
@@ -71,6 +72,7 @@
     transition: .3s;
 }
 .Details:hover{
+    list-style: none;
     box-shadow: -1px 3px 15px 3px rgba(49,171,175,0.92);
 }
 .description{
@@ -116,6 +118,7 @@
     color: #ffffff;
 }
 .dataButton{
+    list-style: none;
     font-size: 1.5rem;
     outline: none;
     font-weight: bold;
@@ -130,6 +133,7 @@
 }
 .dataButton:hover{
     cursor: pointer;
+    list-style: none;
 }
 .wikipedia{
     list-style: none;

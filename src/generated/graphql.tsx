@@ -745,7 +745,7 @@ export type LaunchinfoQuery = (
   { __typename?: 'Query' }
   & { launch?: Maybe<(
     { __typename?: 'Launch' }
-    & Pick<Launch, 'mission_id' | 'mission_name' | 'details' | 'upcoming'>
+    & Pick<Launch, 'mission_id' | 'mission_name' | 'details' | 'upcoming' | 'flight_number'>
     & { links?: Maybe<(
       { __typename?: 'LaunchLinks' }
       & Pick<LaunchLinks, 'flickr_images' | 'video_link' | 'wikipedia'>
@@ -763,7 +763,7 @@ export type LaunchesQuery = (
   { __typename?: 'Query' }
   & { launches?: Maybe<Array<Maybe<(
     { __typename?: 'Launch' }
-    & Pick<Launch, 'mission_id' | 'mission_name' | 'launch_year' | 'launch_date_local' | 'details' | 'launch_success'>
+    & Pick<Launch, 'mission_id' | 'mission_name' | 'launch_year' | 'launch_date_local' | 'details' | 'launch_success' | 'flight_number'>
     & { links?: Maybe<(
       { __typename?: 'LaunchLinks' }
       & Pick<LaunchLinks, 'flickr_images' | 'wikipedia'>
@@ -782,6 +782,7 @@ export const LaunchinfoDocument = gql`
     mission_name
     details
     upcoming
+    flight_number
     links {
       flickr_images
       video_link
@@ -829,6 +830,7 @@ export const LaunchesDocument = gql`
     launch_date_local
     details
     launch_success
+    flight_number
     links {
       flickr_images
       wikipedia
