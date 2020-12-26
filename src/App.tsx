@@ -26,7 +26,7 @@ function App() {
         <Route exact path="/launches"><LaunchesGrid handleChange={handleChange} /></Route>
         <Route exact path="/launches/details"><LaunchDetailsContainer id={id}/></Route>
         </Switch>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }

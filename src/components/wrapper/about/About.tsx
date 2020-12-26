@@ -47,9 +47,9 @@ export function About() {
                   
                 </div>
              </Paper><br />
-             <Paper className={classes.colonies}>
-               <img src="https://www.industrytap.com/wp-content/uploads/2020/06/space-perspective-fullaltitude.png" alt=""/>
-             </Paper>
+             {/* <Paper className={classes.colonies}>
+               <img  src="https://www.industrytap.com/wp-content/uploads/2020/06/space-perspective-fullaltitude.png" alt=""/>
+             </Paper> */}
           </Paper>
         </Grid>
       </Grid>
