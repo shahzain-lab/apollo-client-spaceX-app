@@ -46,6 +46,9 @@ export const Launches: React.FC<Props>=({data,loading,handleChange})=> {
     
   const classes = useStyles();
 
+  if(loading){
+    return <img src={Spinner} alt="gif"/>
+  }
   
     return(
     
