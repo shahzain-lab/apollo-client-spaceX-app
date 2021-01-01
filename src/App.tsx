@@ -5,7 +5,6 @@ import {
     About,
      LaunchDetailsContainer,
      LaunchesGrid,
-     Footer
      } from './components/index';
      import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'; 
 
@@ -26,7 +25,6 @@ function App() {
         <Route exact path="/launches"><LaunchesGrid handleChange={handleChange} /></Route>
         <Route exact path="/launches/details"><LaunchDetailsContainer id={id}/></Route>
         </Switch>
-      <Footer />
     </Router>
   );
 }

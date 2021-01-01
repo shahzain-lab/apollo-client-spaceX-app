@@ -9,7 +9,7 @@ interface OwnProps {
 
 export const LaunchDetailsContainer =({id}: OwnProps)=> {
     
-const {error, loading, data, refetch} = useLaunchinfoQuery({variables: {id: String(id)},});
+const {error, loading, data} = useLaunchinfoQuery({variables: {id: String(id)},});
 
 if(error){
     return <div className="something">
@@ -18,7 +18,7 @@ if(error){
     <ul>
       <li>check the internet routes, cables and modems</li>
       <li>Reconnecting to Wi-Fi</li>
-      <li>Running Windows Network Diagnostics</li>
+      <li>Running Windows Network Diagnostics</li> 
     </ul>
   </div>
 }

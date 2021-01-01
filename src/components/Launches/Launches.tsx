@@ -8,7 +8,8 @@ import classNames from 'classnames';
 import {Link} from 'react-router-dom';
 ///spinner
 import Spinner from '../images/Spinner.gif'
-
+///Moment for date
+import moment from 'moment';
 
 export interface OwnProps{
   handleChange: (newId: number) => void;
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: theme.palette.text.secondary,
       width: '90%',
       background: "#272727",
-      margin:'2.5rem 0',
+      margin:'2.5rem 1.5rem',
       lineHeight: '1.2rem'
     },
   }),
@@ -58,12 +59,12 @@ export const Launches: React.FC<Props>=({data,loading,handleChange})=> {
            {!!data?.launches &&data.launches.map((launch,i) => !!launch &&(
                <Paper className={classes.paper} key={i}>
                  
-                 <h1 className="mission_name">{launch.mission_name} 
-                 <span>{launch.launch_date_local}</span></h1>
+                 <h1 className="mission_name">{launch.mission_name} &nbsp;
+                 <span>{moment(launch.launch_date_local).format("MMMM Do, YYYY")}</span></h1>
            <h4 className="launch-year">Launch Year: <span>{launch.launch_year}</span></h4>
            <h4 className="status">Status: <span className={classNames({
-             'text-success': launch.launch_success,
-             'text-danger': !launch.launch_success
+             'success': launch.launch_success,
+             'danger': !launch.launch_success
            })}
             
            >
@@ -71,7 +72,7 @@ export const Launches: React.FC<Props>=({data,loading,handleChange})=> {
            </span>
            </h4>
            {launch.details ? <h4 className="description"><span>Description: </span>{launch.details}</h4>: null}
-           <Link to="/launches/details" onClick={() => handleChange(launch.flight_number!)} className="Details">Launch Details</Link>
+           <Link to="/launches/details" onClick={() => handleChange(launch.flight_number!)}><button className="Details">Launch Details</button></Link>
                </Paper>
            ))}
            </Grid>

@@ -35,6 +35,12 @@
     font-size: 1.3rem;
     text-transform: uppercase;
 }
+.success{
+    color:#26c826;
+}
+.danger{
+    color: #af1111;
+}
 .something{
     position: absolute;
     top: 0%;

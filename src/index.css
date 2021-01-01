@@ -13,7 +13,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   scroll-behavior: smooth;
-
+  list-style: none;
   overflow-x: hidden;
 }
   /* ///scrollbar// */
