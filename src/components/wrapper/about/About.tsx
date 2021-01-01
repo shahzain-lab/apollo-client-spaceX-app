@@ -4,12 +4,12 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 //
 import colony from '../../images/colony.jpg';
-
+import '../wrapper.css'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    // root: {
-    //   flexGrow: 1,
-    // },
+    root: {
+      flexGrow: 1,
+    },
     grid:{
      display: "flex",
      justifyContent: "center",
@@ -20,9 +20,6 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "90%",
       background: "#272727",
       color: theme.palette.text.secondary,
-    },
-    colonies:{
-      background: "#272727",
     }
   }),
 );
@@ -31,11 +28,10 @@ export function About() {
   const classes = useStyles();
 
   return (
-    <div className="wrapper">
+    <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item className={classes.grid} xs={12}>
           <Paper className={classes.paper}>
-             <Paper className={classes.colonies}>
                 <h3 className="colo">Colonies</h3>
                 <div className="colonies">
                   <img src={colony} alt="" className="colony-img"/>
@@ -46,10 +42,7 @@ export function About() {
                   </p>
                   
                 </div>
-             </Paper><br />
-             {/* <Paper className={classes.colonies}>
-               <img  src="https://www.industrytap.com/wp-content/uploads/2020/06/space-perspective-fullaltitude.png" alt=""/>
-             </Paper> */}
+           
           </Paper>
         </Grid>
       </Grid>
