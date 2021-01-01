@@ -27,8 +27,10 @@ export const Header =()=> {
               <h1 className="head">Road to the red palnet</h1>
                 <p>spaceX design,Launches and manufactures adavanced<br /> rockets and spacecraft</p>
                     
-                 <Link to="/launches" className="right-btn">
+                 <Link to="/launches">
+                   <button className="right-btn">
                     view Launches
+                    </button>
                    </Link>   
     
                   </div>

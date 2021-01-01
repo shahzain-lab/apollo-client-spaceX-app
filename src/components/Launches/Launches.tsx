@@ -6,10 +6,12 @@ import Grid from '@material-ui/core/Grid';
 //className and moment
 import classNames from 'classnames';
 import {Link} from 'react-router-dom';
-///spinner
-import Spinner from '../images/Spinner.gif'
 ///Moment for date
 import moment from 'moment';
+///backdrop
+import Backdrop from '@material-ui/core/Backdrop';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 
 export interface OwnProps{
   handleChange: (newId: number) => void;
@@ -24,6 +26,9 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+    }, backdrop: {
+      zIndex: theme.zIndex.drawer + 1,
+      color: '#606060',
     },
     grid:{
         display: 'block',
@@ -48,7 +53,9 @@ export const Launches: React.FC<Props>=({data,loading,handleChange})=> {
   const classes = useStyles();
 
   if(loading){
-    return <img src={Spinner} alt="gif"/>
+    return  <Backdrop className={classes.backdrop} open>
+    <CircularProgress color="inherit" />
+  </Backdrop>
   }
   
     return(

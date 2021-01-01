@@ -5,7 +5,10 @@ import classNames from 'classnames';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-
+///backdrop
+import Backdrop from '@material-ui/core/Backdrop';
+import CircularProgress from '@material-ui/core/CircularProgress';
+//router link
 import {Link} from 'react-router-dom';
 
 interface Props{
@@ -17,6 +20,9 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+    }, backdrop: {
+      zIndex: theme.zIndex.drawer + 1,
+      color: '#606060',
     },
     grid:{
         display: 'flex',
@@ -36,7 +42,9 @@ export const LaunchDetails: React.FC<Props> = ({data,loading}) => {
   const classes = useStyles();
     
    if(loading){
-       return<h1>Loading ...</h1>
+       return  <Backdrop className={classes.backdrop} open>
+       <CircularProgress color="inherit" />
+     </Backdrop>
    }
    if(!data?.launch){
        return<h3>data is not available</h3>
