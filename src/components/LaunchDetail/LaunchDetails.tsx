@@ -55,7 +55,7 @@ export const LaunchDetails: React.FC<Props> = ({data,loading}) => {
       
         <Grid item className={classes.grid} xs={12}>
           <Paper className={classes.paper}>
-          <img    style={{borderRadius: '1rem'}}
+          <img style={{borderRadius: '1rem'}}
                       src={(!!data.launch.links &&
                         !!data.launch.links?.flickr_images &&
                         data.launch.links?.flickr_images[0]
